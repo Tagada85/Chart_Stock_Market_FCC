@@ -52,7 +52,7 @@ io.sockets.on('connection', (socket)=>{
 });
 
 
-
+const port = process.env.PORT || 3000;
 
 
 db.on('open', ()=>{
@@ -108,4 +108,4 @@ app.use(function(err, req, res, next) {
   });
 });
 
-server.listen(3000);
+server.listen(port);
