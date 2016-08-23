@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1.text-center= title
+  #container
+  form.text-center
+    input(type='text' name="symbol" placeholder='Add Stock Code')#symbol
+    input(type="submit" value='Add' )#submitBtn.btn.btn-success
+  #stocks
+  script(src="http://code.highcharts.com/highcharts.js")
+  script(src='/socket.io/socket.io.js')
+  script(src='../javascripts/charts.js')
+        

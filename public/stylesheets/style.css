@@ -1,0 +1,18 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#container{
+	height: 400px;
+	width: 100%;
+}
+
+.stock_desc{
+	display: inline-block;
+	max-width: 25%;
+}
