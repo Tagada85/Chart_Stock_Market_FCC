@@ -12,7 +12,7 @@ const server = http.createServer(app);
 var io = require('socket.io')(server);
 const Symbol = require('./models/Symbol');
 
-
+const port = process.env.PORT || 3000;
 var routes = require('./routes/index');
 //configure mongoose
 mongoose.connect("mongodb://localhost:27017/stockMarket");
@@ -52,7 +52,7 @@ io.sockets.on('connection', (socket)=>{
 });
 
 
-const port = process.env.PORT || 3000;
+
 
 
 db.on('open', ()=>{
