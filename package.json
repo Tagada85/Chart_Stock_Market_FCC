@@ -14,15 +14,7 @@
     "socket.io": "^1.4.8"
   },
   "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Tagada85/Chart_Stock_Market_FCC.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Tagada85/Chart_Stock_Market_FCC/issues"
-  },
-  "homepage": "https://github.com/Tagada85/Chart_Stock_Market_FCC#readme",
   "description": ""
 }
