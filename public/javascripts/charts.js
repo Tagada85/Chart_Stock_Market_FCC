@@ -1,3 +1,4 @@
+'strict mode';
 const socket = io.connect();
 
 socket.on('display charts',function(data){
