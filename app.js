@@ -6,9 +6,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const http = require('http');
 var app = express();
-const server = http.createServer(app);
+const server = require('http').Server(app);
 var io = require('socket.io')(server);
 const Symbol = require('./models/Symbol');
 
@@ -20,7 +19,7 @@ const db = mongoose.connection;
 mongoose.Promise = global.Promise;
 
 
-io.sockets.on('connection', (socket)=>{
+io.on('connection', (socket)=>{
     Symbol.find({}, (err, stocks)=>{
     if(err) return next(err);
     io.emit('display charts', { stocks : stocks});
@@ -44,16 +43,11 @@ io.sockets.on('connection', (socket)=>{
     Symbol.remove({ symbol_name: id.id.toLowerCase()}, (callback)=>{
       Symbol.find({}, (err, stocks)=>{
           if(err) throw err;
-          console.log(stocks);
           io.emit('display charts', { stocks: stocks});
         });
   });
   })
 });
-
-
-
-
 
 db.on('open', ()=>{
   console.log('Connection to db successfull');

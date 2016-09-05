@@ -1,5 +1,5 @@
 'strict mode';
-const socket = io.connect();
+const socket = io.connect('http://localhost:5000');
 
 socket.on('display charts',function(data){
     let symbols = data.stocks.map((el)=>{
@@ -65,14 +65,6 @@ socket.on('display charts',function(data){
         });
     });
 
-});
-
-$('#submitBtn').click(function(e){
-    let symbol = $('#symbol').val();
-    socket.emit('add stock', { symbol: symbol});
-    // $.post('/api/newSymbol',{symbol: symbol},function(data){
-    //     console.log('Added');
-    // });
 });
 
 
