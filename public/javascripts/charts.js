@@ -1,5 +1,5 @@
 'strict mode';
-const socket = io.connect('http://localhost:5000');
+const socket = io.connect('https://morning-reef-68678.herokuapp.com');
 
 socket.on('display charts',function(data){
     let symbols = data.stocks.map((el)=>{
