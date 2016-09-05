@@ -10,9 +10,5 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Chart the Stock market'});
 });
 
-
-
-
-
 module.exports = router;
 

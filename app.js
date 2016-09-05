@@ -15,7 +15,7 @@ const Symbol = require('./models/Symbol');
 const port = process.env.PORT || 3000;
 var routes = require('./routes/index');
 //configure mongoose
-mongoose.connect("mongodb://localhost:27017/stockMarket");
+mongoose.connect(" mongodb://Tagada85:kallon85@ds021026.mlab.com:21026/stock_market");
 const db = mongoose.connection;
 mongoose.Promise = global.Promise;
 
